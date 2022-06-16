@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TrafficLight(props) {
+export default function TrafficLight({ color }) {
   return (
     // this component takes in a prop called color. It is either 'red', 'yellow' or 'green'.
     <div className='traffic-light'>
