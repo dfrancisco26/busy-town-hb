@@ -40,7 +40,7 @@ function App() {
           </div>
         </div>
       </div>
-      <TrafficLight color={lightColor} />
+      <TrafficLight lightColor={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button onClick={() => setLightColor('red')}>Red</button>
