@@ -31,7 +31,7 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          {/* <Route exact path ="/">
+          <Route exact path ="/">
             <BusyCity
               lightColor = {lightColor}
               setLightColor = {setLightColor}
@@ -41,7 +41,7 @@ function App() {
               setAlienSize = {setAlienSize}
               traffic = {traffic}
               setTraffic = {setTraffic} />
-          </Route> */}
+          </Route>
           <Route exact path="/admin">
             <Admin />
           </Route>

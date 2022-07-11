@@ -2,7 +2,7 @@ import React from 'react';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
 
-export default function BusyCity(alienSize, setAlienSize, lizardSize, setLizardSize, lightColor, setLightColor, traffic, setTraffic) {
+export default function BusyCity({ alienSize, setAlienSize, lizardSize, setLizardSize, lightColor, setLightColor, traffic, setTraffic }) {
   return (
     <div>
       <div className="fight">
