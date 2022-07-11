@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import Button from '@mui/material/Button';
 
 export default function DopeButton({
   onClick, 
   children, 
-  coolColor = 'cyan', 
-  border = 'orange solid 3px',
+  coolColor = 'orange', 
+  border = 'white solid 3px',
   margin = '10px',
   variant = 'outlined'
 }) {
