@@ -1,0 +1,12 @@
+export const customers = [{ 'id':1, 'first_name':'Byrle', 'last_name':'Benedito', 'big_lucky_number':2439521 },
+  { 'id':2, 'first_name':'Chantal', 'last_name':'Phelit', 'big_lucky_number':1178839 },
+  { 'id':3, 'first_name':'Lilian', 'last_name':'Spensly', 'big_lucky_number':3985981 },
+  { 'id':4, 'first_name':'Nancie', 'last_name':"O'Shavlan", 'big_lucky_number':1551741 },
+  { 'id':5, 'first_name':'Krystal', 'last_name':'McQuilkin', 'big_lucky_number':2176646 },
+  { 'id':6, 'first_name':'Arlan', 'last_name':'Whereat', 'big_lucky_number':5161861 },
+  { 'id':7, 'first_name':'Alexandre', 'last_name':'Lenoir', 'big_lucky_number':8705595 },
+  { 'id':8, 'first_name':'Raff', 'last_name':'Willingham', 'big_lucky_number':369001 },
+  { 'id':9, 'first_name':'Mindy', 'last_name':'Ryhorovich', 'big_lucky_number':8557532 },
+  { 'id':10, 'first_name':'Prentice', 'last_name':'Marley', 'big_lucky_number':5164660 },
+  { 'id':11, 'first_name':'Whitby', 'last_name':'Erwin', 'big_lucky_number':8147523 },
+  { 'id':12, 'first_name':'Davis', 'last_name':'Barthelme', 'big_lucky_number':5112050 }];

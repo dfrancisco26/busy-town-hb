@@ -1,8 +1,16 @@
+import React from 'react';
+import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
-import VehicleList from './VehicleList';
-import TrafficLight from './TrafficLight';
+import Admin from './Admin';
+import BusyCity from './BusyCity';
 
 function App() {
+  const [lightColor, setLightColor] = useState('red');
+  const [lizardSize, setLizardSize] = useState(10);
+  const [alienSize, setAlienSize] = useState(10);
+  const [traffic, setTraffic] = useState(['car', 'truck']);
+
   // track the following state with a few useState hooks:
   // lightColor should be a string that starts out as 'red'
   // lizardSize should be a number that starts out as 10
@@ -10,57 +18,38 @@ function App() {
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
 
   return (
-    <div className="App">
-      <div className="fight">
-        <div className="monster">
-          {/* the width of the alien should be ten times whatever the alien size is in state */}
-          <img src="alien.png" width={20} />
-          <div className='buttons'>
-            {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh no! The alien is gobblin up all the electricity!</button>
-            {/* when you click this button, the lizard's size in state should go down by one */}
-            <button >Amazing! The alien zapped the lizard!</button>
-          </div>
-        </div>
-        <div className="monster">
-          {/* the width of the lizard should be ten times whatever the alien size is in state */}
-          <img src="lizard.png" width={20} />
-          <div className="buttons">
-            {/* when you click this button, the lizard's size in state should go up by one */}
-            <button>Yegads! The lizard is ramping up to its final form!</button>
-            {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh my! The lizard chomped down on the alien!</button>
-          </div>
-        </div>
-      </div>
-      <TrafficLight color={lightColor} />
-      <div className="buttons">
-        {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button>Red</button>
-        {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button>Yellow</button>
-        {/* when you click this button, the color of the light in state should be set to 'green' */}
-        <button>Green</button>
-      </div>
-      {/* 
-      the VehicleList component takes in one prop: vehicles.
-      This prop should be an array of strings like ['car', 'truck', 'truck', 'car', 'bus'].
-      Do you have something like that in state that you could pass as a vehicles prop? 
-      */}
-      <VehicleList />
-      <div className='buttons'>
-        {/* This part is weird */}
-        {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'car' to the end */}
-        <button>Car</button>
-        {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'bus' to the end */}
-        <button>Bus</button>
-        {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'truck' to the end */}
-        <button>Truck</button>
-        {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'motorcycle' to the end */}
-        <button>Motorcycle</button>
-      </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/admin">Admin</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route exact path ="/">
+            <BusyCity
+              lightColor = {lightColor}
+              setLightColor = {setLightColor}
+              lizardSize = {lizardSize}
+              setLizardSize = {setLizardSize}
+              alienSize = {alienSize}
+              setAlienSize = {setAlienSize}
+              traffic = {traffic}
+              setTraffic = {setTraffic} />
+          </Route>
+          <Route exact path="/admin">
+            <Admin />
+          </Route>
+        </Switch>
+        
 
-    </div>
+      </div>
+    </Router>
   );
 }
 
