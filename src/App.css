@@ -1,9 +1,9 @@
-body {
-  background-image: url("./city.png");
-  background-size: cover; background-repeat: no-repeat;
-}
 
 .App {
+  background-image: url("./city.png");
+  background-size: cover; background-repeat: no-repeat;
+  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

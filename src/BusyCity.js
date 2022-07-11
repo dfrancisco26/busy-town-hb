@@ -1,7 +1,7 @@
 import React from 'react';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
-
+import DopeButton from './DopeButton';
 export default function BusyCity({ alienSize, setAlienSize, lizardSize, setLizardSize, lightColor, setLightColor, traffic, setTraffic }) {
   return (
     <div>
@@ -30,7 +30,7 @@ export default function BusyCity({ alienSize, setAlienSize, lizardSize, setLizar
       <TrafficLight lightColor={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button onClick={() => setLightColor('red')}>Red</button>
+        <DopeButton onClick={() => setLightColor('red')}>Red</DopeButton>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
         <button onClick={() => setLightColor('yellow')}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
